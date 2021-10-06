@@ -72,8 +72,12 @@ export default class extends ApplicationController {
   //   element.innerText = '\nNow, the cleanup can begin!'
   // }
 
+  finalizeNew() {
+    this.nameInputTarget.focus()
+  }
+
   finalizeSubmit(element, reflex, noop, reflexId) {
-    console.log("finalizeSubmit");
     this.nameInputTarget.value = ""
+    this.nameInputTarget.focus()
   }
 }
